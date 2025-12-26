@@ -67,6 +67,27 @@
             100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
         }
 
+        .flowers {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .flower {
+            position: absolute;
+            color: #ff69b4;
+            font-size: 20px;
+            animation: bloom 8s infinite ease-in-out;
+        }
+        @keyframes bloom {
+            0% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+            100% { opacity: 0; transform: scale(0.5) rotate(360deg); }
+        }
+        
         .container {
             margin: 20px;
             background-color: rgba(255, 255, 255, 0.95);
@@ -212,6 +233,14 @@
         <div class="heart" style="left: 80%; animation-delay: 7s;">💗</div>
         <div class="heart" style="left: 90%; animation-delay: 8s;">💓</div>
     </div>
+    
+    <div class="flowers">
+        <div class="flower" style="left: 10%; top: 20%; animation-delay: 0s;">🌸</div>
+        <div class="flower" style="left: 30%; top: 40%; animation-delay: 2s;">🌹</div>
+        <div class="flower" style="left: 50%; top: 60%; animation-delay: 4s;">🌷</div>
+        <div class="flower" style="left: 70%; top: 30%; animation-delay: 6s;">🌺</div>
+        <div class="flower" style="left: 90%; top: 50%; animation-delay: 8s;">🌻</div>
+    </div>
 
     <div class="container" role="main" aria-label="Penjelasan Romantis">
         <div class="title">Lovvyuuu Amira Safaraz 💕</div>
@@ -249,4 +278,5 @@
             window.location.href = 'NEXT2.html'; // Ganti dengan nama file halaman sebelumnya
         });
     </script>
+
 </body>
